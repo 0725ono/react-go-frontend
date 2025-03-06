@@ -10,6 +10,14 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+// biome-ignore lint/correctness/noEmptyPattern: <explanation>
+export const meta = ({}: Route.MetaArgs) => {
+  return [
+    { title: 'React Router App' },
+    { name: 'description', content: 'React Router v7' },
+  ];
+}
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
